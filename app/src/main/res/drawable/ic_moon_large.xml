@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="80"
+    android:viewportHeight="80">
+    
+    <!-- Moon base -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M40,5 A35,35 0 1,1 40,75 A35,35 0 1,1 40,5 Z" />
+    
+    <!-- Moon shadow/crescent effect -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M55,10 A30,35 0 0,1 55,70 A25,30 0 0,0 55,10 Z" />
+    
+    <!-- Crater 1 -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M25,25 A8,8 0 1,1 25.01,25 Z" />
+    
+    <!-- Crater 2 -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M45,35 A5,5 0 1,1 45.01,35 Z" />
+    
+    <!-- Crater 3 -->
+    <path
+        android:fillColor="#9E9E9E"
+        android:pathData="M30,50 A6,6 0 1,1 30.01,50 Z" />
+    
+    <!-- Crater 4 -->
+    <path
+        android:fillColor="#BDBDBD"
+        android:pathData="M50,55 A4,4 0 1,1 50.01,55 Z" />
+    
+    <!-- Highlight -->
+    <path
+        android:fillColor="#F5F5F5"
+        android:pathData="M20,20 A5,5 0 1,1 20.01,20 Z" />
+</vector>

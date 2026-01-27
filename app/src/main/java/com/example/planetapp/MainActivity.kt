@@ -3,14 +3,17 @@ package com.example.planetapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.planetapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        MyRecyclearView.adapter = Adapter(SetData.SetPlanet())
-        MyRecyclearView.layoutManager = LinearLayoutManager(this)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.MyRecyclearView.adapter = Adapter(SetData.SetPlanet())
+        binding.MyRecyclearView.layoutManager = LinearLayoutManager(this)
 
     }
 }

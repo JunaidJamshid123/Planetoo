@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/moon_selection_bg"
+    tools:context=".presentation.moons.MoonPlanetSelectionActivity">
+
+    <!-- Decorative Orbit Ring 1 - Large Top Right -->
+    <View
+        android:id="@+id/orbitPath1"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-180dp"
+        android:layout_marginEnd="-180dp"
+        android:alpha="0.2"
+        android:background="@drawable/orbit_ring" />
+
+    <!-- Decorative Orbit Ring 2 - Medium Center -->
+    <View
+        android:id="@+id/orbitPath2"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-100dp"
+        android:alpha="0.12"
+        android:background="@drawable/orbit_ring" />
+
+    <!-- Decorative Orbit Ring 3 - Small -->
+    <View
+        android:id="@+id/orbitPath3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="-80dp"
+        android:alpha="0.08"
+        android:background="@drawable/orbit_ring" />
+
+    <!-- Decorative Saturn - Top Right -->
+    <ImageView
+        android:id="@+id/decorSaturn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="25dp"
+        android:alpha="0.85"
+        android:src="@drawable/planet_saturn"
+        android:contentDescription="Decorative Saturn" />
+
+    <!-- Decorative Moon - Top Left -->
+    <ImageView
+        android:id="@+id/decorMoon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="30dp"
+        android:alpha="0.5"
+        android:src="@drawable/moon"
+        android:contentDescription="Decorative Moon" />
+
+    <!-- Sparkle Star 1 -->
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="80dp"
+        android:alpha="0.6"
+        android:src="@drawable/ic_sparkle"
+        android:contentDescription="Star" />
+
+    <!-- Sparkle Star 2 -->
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="100dp"
+        android:alpha="0.4"
+        android:src="@drawable/ic_star_small"
+        android:contentDescription="Star" />
+
+    <!-- Sparkle Star 3 -->
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="140dp"
+        android:alpha="0.5"
+        android:src="@drawable/ic_sparkle"
+        android:contentDescription="Star" />
+
+    <!-- Sparkle Star 4 -->
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="70dp"
+        android:alpha="0.35"
+        android:src="@drawable/ic_star_small"
+        android:contentDescription="Star" />
+
+    <!-- Small decorative dot 1 -->
+    <View
+        android:id="@+id/dot1"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="60dp"
+        android:alpha="0.4"
+        android:background="@drawable/circle_button_bg" />
+
+    <!-- Small decorative dot 2 -->
+    <View
+        android:id="@+id/dot2"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="150dp"
+        android:alpha="0.3"
+        android:background="@drawable/circle_button_bg" />
+
+    <!-- Decorative small Earth - Center Right -->
+    <ImageView
+        android:id="@+id/decorEarth"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="30dp"
+        android:alpha="0.4"
+        android:src="@drawable/planet_earth"
+        android:contentDescription="Decorative Earth" />
+
+    <!-- Decorative small Jupiter - Left side -->
+    <ImageView
+        android:id="@+id/decorJupiter"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="15dp"
+        android:alpha="0.35"
+        android:src="@drawable/planet_jupiter"
+        android:contentDescription="Decorative Jupiter" />
+
+    <!-- Sparkle Star 5 -->
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="40dp"
+        android:alpha="0.5"
+        android:src="@drawable/ic_sparkle"
+        android:contentDescription="Star" />
+
+    <!-- Small decorative dot 3 -->
+    <View
+        android:id="@+id/dot3"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="60dp"
+        android:alpha="0.25"
+        android:background="@drawable/circle_button_bg" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Top Area with Back Button and Title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="48dp"
+                android:paddingBottom="16dp">
+
+                <!-- Back Button -->
+                <ImageButton
+                    android:id="@+id/backButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/circle_button_bg"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:rotation="180"
+                    android:padding="10dp"
+                    app:tint="@android:color/white"
+                    android:contentDescription="Back" />
+
+                <!-- Title Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EXPLORE"
+                        android:textColor="#BB86FC"
+                        android:textSize="13sp"
+                        android:letterSpacing="0.2"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/mainTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Moons"
+                        android:textColor="@android:color/white"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="0.01"
+                        android:shadowColor="#40000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
+
+                    <TextView
+                        android:id="@+id/subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Select a planet to discover its moons"
+                        android:textColor="@color/subtext"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Main Content Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contentCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/primary"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="32dp">
+
+                    <!-- Search Bar -->
+                    <LinearLayout
+                        android:id="@+id/searchContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:background="@drawable/search_bar_bg"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="18dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_search_purple" />
+
+                        <EditText
+                            android:id="@+id/searchEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="14dp"
+                            android:background="@android:color/transparent"
+                            android:hint="Search planets..."
+                            android:textColorHint="#60FFFFFF"
+                            android:textColor="@android:color/white"
+                            android:textSize="15sp"
+                            android:imeOptions="actionSearch"
+                            android:inputType="text"
+                            android:fontFamily="sans-serif" />
+
+                    </LinearLayout>
+
+                    <!-- Filter Chips -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:scrollbars="none"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="4dp">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/filterChipGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            app:selectionRequired="true"
+                            app:chipSpacingHorizontal="10dp">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipAll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:text="✨ All"
+                                android:checked="true"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                app:chipBackgroundColor="@color/chip_bg_color"
+                                app:chipCornerRadius="21dp"
+                                app:chipStrokeWidth="1.5dp"
+                                app:chipStrokeColor="#50BB86FC"
+                                android:textColor="@color/chip_text_color"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipInner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:text="🪨 Inner"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                app:chipBackgroundColor="@color/chip_bg_color"
+                                app:chipCornerRadius="21dp"
+                                app:chipStrokeWidth="1.5dp"
+                                app:chipStrokeColor="#50BB86FC"
+                                android:textColor="@color/chip_text_color"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipOuter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:text="🌌 Outer"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                app:chipBackgroundColor="@color/chip_bg_color"
+                                app:chipCornerRadius="21dp"
+                                app:chipStrokeWidth="1.5dp"
+                                app:chipStrokeColor="#50BB86FC"
+                                android:textColor="@color/chip_text_color"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipDwarf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="42dp"
+                                android:text="🔮 Dwarf"
+                                style="@style/Widget.MaterialComponents.Chip.Choice"
+                                app:chipBackgroundColor="@color/chip_bg_color"
+                                app:chipCornerRadius="21dp"
+                                app:chipStrokeWidth="1.5dp"
+                                app:chipStrokeColor="#50BB86FC"
+                                android:textColor="@color/chip_text_color"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium" />
+
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </HorizontalScrollView>
+
+                    <!-- Section Title -->
+                    <TextView
+                        android:id="@+id/sectionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginStart="4dp"
+                        android:text="Choose a Planet"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <!-- Planets Grid -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/planetsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:nestedScrollingEnabled="false"
+                        android:clipToPadding="false"
+                        tools:listitem="@layout/item_planet_selection" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/loadingProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="#BB86FC" />
+
+</FrameLayout>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,26 +14,94 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlanetApp"
         tools:targetApi="31">
+        
+        <!-- Splash Screen - Launcher Activity -->
+        <activity
+            android:name=".presentation.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PlanetApp.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Home Activity (Categories) -->
+        <activity
+            android:name=".presentation.home.HomeActivity"
+            android:exported="false">
+        </activity>
+        
+        <!-- Planet List Activity -->
+        <activity
+            android:name=".presentation.planets.PlanetListActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.home.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.home.HomeActivity" />
+        </activity>
+        
+        <!-- Planet Detail Activity -->
+        <activity
+            android:name=".presentation.detail.PlanetDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.planets.PlanetListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.planets.PlanetListActivity" />
+        </activity>
+        
+        <!-- Category Detail Activity (Blank pages for other categories) -->
+        <activity
+            android:name=".presentation.category.CategoryDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.home.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.home.HomeActivity" />
+        </activity>
+        
+        <!-- Moon Planet Selection Activity -->
+        <activity
+            android:name=".presentation.moons.MoonPlanetSelectionActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.home.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.home.HomeActivity" />
+        </activity>
+        
+        <!-- Moons List Activity -->
+        <activity
+            android:name=".presentation.moons.MoonsActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.moons.MoonPlanetSelectionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.moons.MoonPlanetSelectionActivity" />
+        </activity>
+        
+        <!-- Moon Detail Activity -->
+        <activity
+            android:name=".presentation.moons.MoonDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.moons.MoonsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.moons.MoonsActivity" />
+        </activity>
+        
+        <!-- Legacy Activities (can be removed later) -->
         <activity
             android:name=".PlanetDetails"
             android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            android:exported="false">
         </activity>
+        
     </application>
 
 </manifest>

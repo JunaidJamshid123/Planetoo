@@ -33,7 +33,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="-50dp"
-            android:background="@color/purple_500"
+            app:cardBackgroundColor="@color/secondry"
             app:cardCornerRadius="10dp"
             android:elevation="10dp"
             android:layout_height="match_parent">
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:orientation="vertical"
                 android:paddingTop="60dp"
-                android:background="#592F95"
+                android:background="@color/secondry"
                 android:gravity="center"
                 android:layout_height="match_parent">
 
@@ -156,7 +156,8 @@
                     android:letterSpacing="0.1"
                     android:textStyle="bold"
                     android:lineSpacingExtra="1dp"
-                    android:text="@string/the_moon_is_earth_s_only_natural_satellite_at_about_one_quarter_the_diameter_of_earth_comparable_to_the_width_of_australia_it_is_the_largest_natural_satellite_in_the_solar_system_relative_to_the_size_of_its_planet_the_fifth_largest_satellite_in_the_solar_system_overall_and_is_larger_than_any_dwarf_planet_norbiting_earth_at_an_average_distance_of_384_400_km_238_900_mi_or_about_30_times_earth_s_diameter_its_gravitational_influence_slightly_lengthens_earth_s_day_and_is_the_main_driver_of_earth_s_tides_the_moon_is_classified_as_a_planetary_mass_object_and_a_differentiated_rocky_body_and_lacks_any_significant_atmosphere_hydrosphere_or_magnetic_field_nits_surface_gravity_is_about_one_sixth_of_earth_s_0_1654_g_jupiter_s_moon_io_is_the_only_satellite_in_the_solar_system_known_to_have_a_higher_surface_gravity_and_density"
+                    android:textColor="@color/subtext"
+                    android:text=""
                     android:layout_height="wrap_content">
                 </TextView>
             </LinearLayout>

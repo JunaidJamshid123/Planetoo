@@ -2,28 +2,26 @@ package com.example.planetapp
 
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.view.view.*
+import com.example.planetapp.databinding.ViewBinding
 
 class Adapter(val planet:List<PlanetData>):RecyclerView.Adapter<Adapter.myviewHolder>() {
-    class myviewHolder(view: View):RecyclerView.ViewHolder(view){
+    class myviewHolder(val binding: ViewBinding):RecyclerView.ViewHolder(binding.root){
 
-        val title = view.title
-        val img = view.planetImage
-        val galaxy = view.Galaxy
-        val distance = view.distance
-        val gravity = view.gravity
+        val title = binding.title
+        val img = binding.planetImage
+        val galaxy = binding.Galaxy
+        val distance = binding.distance
+        val gravity = binding.gravity
 
 
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myviewHolder {
-       var itemView = LayoutInflater.from(parent.context)
-           .inflate(R.layout.view,parent,false)
-        return myviewHolder(itemView)
+       val binding = ViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return myviewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: myviewHolder, position: Int) {

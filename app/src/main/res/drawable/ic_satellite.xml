@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    
+    <!-- Main body -->
+    <path
+        android:fillColor="#4DD0E1"
+        android:pathData="M32,24 L40,32 L32,40 L24,32 Z" />
+    
+    <!-- Solar panel left -->
+    <path
+        android:fillColor="#4DD0E1"
+        android:pathData="M20,28 L12,28 L12,36 L20,36 Z" />
+    
+    <!-- Solar panel right -->
+    <path
+        android:fillColor="#4DD0E1"
+        android:pathData="M44,28 L52,28 L52,36 L44,36 Z" />
+    
+    <!-- Solar panel details left -->
+    <path
+        android:fillColor="#00ACC1"
+        android:pathData="M14,30 L18,30 L18,34 L14,34 Z" />
+    
+    <!-- Solar panel details right -->
+    <path
+        android:fillColor="#00ACC1"
+        android:pathData="M46,30 L50,30 L50,34 L46,34 Z" />
+    
+    <!-- Antenna -->
+    <path
+        android:strokeColor="#4DD0E1"
+        android:strokeWidth="2"
+        android:pathData="M32,24 L32,16 M28,16 L36,16" />
+    
+    <!-- Panel connectors -->
+    <path
+        android:fillColor="#00ACC1"
+        android:pathData="M20,30 L24,30 L24,34 L20,34 Z" />
+    <path
+        android:fillColor="#00ACC1"
+        android:pathData="M40,30 L44,30 L44,34 L40,34 Z" />
+</vector>

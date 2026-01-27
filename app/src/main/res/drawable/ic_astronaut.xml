@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- Helmet -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,20 C45,20 35,32 35,48 C35,64 45,76 60,76 C75,76 85,64 85,48 C85,32 75,20 60,20 Z" />
+    
+    <!-- Helmet visor -->
+    <path
+        android:fillColor="#4FC3F7"
+        android:pathData="M60,28 C50,28 42,38 42,50 C42,62 50,68 60,68 C70,68 78,62 78,50 C78,38 70,28 60,28 Z" />
+    
+    <!-- Visor reflection -->
+    <path
+        android:fillColor="#81D4FA"
+        android:pathData="M48,38 C48,38 52,36 58,36 C58,42 52,46 48,38 Z" />
+    
+    <!-- Body/Suit -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M45,76 L40,100 L50,100 L55,85 L65,85 L70,100 L80,100 L75,76 Z" />
+    
+    <!-- Backpack -->
+    <path
+        android:fillColor="#90A4AE"
+        android:pathData="M38,50 L32,50 L32,75 L38,75 Z" />
+    <path
+        android:fillColor="#90A4AE"
+        android:pathData="M82,50 L88,50 L88,75 L82,75 Z" />
+    
+    <!-- Oxygen tubes -->
+    <path
+        android:strokeColor="#78909C"
+        android:strokeWidth="3"
+        android:fillColor="#00000000"
+        android:pathData="M35,60 Q25,60 25,75 Q25,90 40,95" />
+    
+    <!-- Left arm -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M40,78 L30,90 L25,88 L22,95 L30,100 L42,85 Z" />
+    
+    <!-- Left glove -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,92 C18,90 16,92 18,96 C20,100 24,102 26,100 L22,95 Z" />
+    
+    <!-- Right arm raised -->
+    <path
+        android:fillColor="#ECEFF1"
+        android:pathData="M75,78 L85,65 L92,68 L95,60 L88,55 L78,72 Z" />
+    
+    <!-- Right glove waving -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M95,55 C98,52 100,54 98,58 C96,62 92,64 90,62 L95,60 Z" />
+    
+    <!-- Boots -->
+    <path
+        android:fillColor="#546E7A"
+        android:pathData="M45,100 L38,110 L52,110 L50,100 Z" />
+    <path
+        android:fillColor="#546E7A"
+        android:pathData="M70,100 L68,110 L82,110 L75,100 Z" />
+    
+    <!-- Helmet ring -->
+    <path
+        android:strokeColor="#B0BEC5"
+        android:strokeWidth="3"
+        android:fillColor="#00000000"
+        android:pathData="M42,72 Q60,80 78,72" />
+    
+    <!-- Control panel on chest -->
+    <path
+        android:fillColor="#FF7043"
+        android:pathData="M55,82 L65,82 L65,88 L55,88 Z" />
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M57,84 A1,1 0 1,1 57.01,84" />
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M61,84 A1,1 0 1,1 61.01,84" />
+</vector>
