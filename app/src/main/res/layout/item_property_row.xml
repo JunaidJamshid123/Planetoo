@@ -3,24 +3,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="4dp">
+    android:paddingVertical="6dp"
+    android:paddingHorizontal="8dp">
 
     <TextView
         android:id="@+id/propertyLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Label"
-        android:textColor="#9E9E9E"
-        android:textSize="11sp" />
+        android:textColor="#A0A0A0"
+        android:textSize="11sp"
+        android:letterSpacing="0.02" />
 
     <TextView
         android:id="@+id/propertyValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="5dp"
         android:text="Value"
         android:textColor="@color/white"
         android:textSize="14sp"
-        android:textStyle="bold" />
+        android:fontFamily="sans-serif-medium" />
 
 </LinearLayout>

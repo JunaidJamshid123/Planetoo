@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/moon_selection_bg"
+    tools:context=".presentation.spacex.SpaceAgencySelectionActivity">
+
+    <!-- Decorative Orbit Ring 1 -->
+    <View
+        android:id="@+id/orbitPath1"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-150dp"
+        android:layout_marginEnd="-150dp"
+        android:alpha="0.15"
+        android:background="@drawable/orbit_ring" />
+
+    <!-- Decorative Orbit Ring 2 -->
+    <View
+        android:id="@+id/orbitPath2"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="-80dp"
+        android:alpha="0.1"
+        android:background="@drawable/orbit_ring" />
+
+    <!-- Decorative Saturn -->
+    <ImageView
+        android:id="@+id/decorSaturn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:alpha="0.8"
+        android:src="@drawable/planet_saturn"
+        android:contentDescription="Decorative Saturn" />
+
+    <!-- Sparkle Star 1 -->
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="70dp"
+        android:alpha="0.5"
+        android:src="@drawable/ic_sparkle"
+        android:contentDescription="Star" />
+
+    <!-- Sparkle Star 2 -->
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="top|start"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="80dp"
+        android:alpha="0.4"
+        android:src="@drawable/ic_star_small"
+        android:contentDescription="Star" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Top Area with Back Button and Title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="48dp"
+                android:paddingBottom="16dp">
+
+                <!-- Back Button Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/btnBack"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:background="@drawable/circle_button_bg"
+                        android:src="@drawable/ic_arrow_forward"
+                        android:rotation="180"
+                        android:padding="10dp"
+                        app:tint="@android:color/white"
+                        android:contentDescription="Back" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <!-- Live indicator -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="● LIVE"
+                        android:textColor="#4CAF50"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/badge_live"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="6dp" />
+
+                </LinearLayout>
+
+                <!-- Title Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EXPLORE"
+                        android:textColor="#BB86FC"
+                        android:textSize="13sp"
+                        android:letterSpacing="0.2"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Space Missions"
+                        android:textColor="@android:color/white"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-black"
+                        android:letterSpacing="0.01"
+                        android:shadowColor="#40000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Select a space agency to explore"
+                        android:textColor="@color/subtext"
+                        android:textSize="15sp"
+                        android:fontFamily="sans-serif" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Main Content Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/primary"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="32dp">
+
+                    <!-- Section Title -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="Choose an Agency"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <!-- SpaceX Card -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardSpaceX"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#1A1744">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- SpaceX Background -->
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/spacex" />
+
+                            <!-- Dark Gradient Overlay -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_gradient_overlay_dark" />
+
+                            <!-- Content -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="bottom"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SpaceX"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="sans-serif-medium" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Launches, Rockets &amp; Crew"
+                                    android:textColor="#B0FFFFFF"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="2dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="🚀 200+ Launches"
+                                        android:textColor="#BB86FC"
+                                        android:textSize="12sp"
+                                        android:background="@drawable/chip_bg_transparent"
+                                        android:paddingHorizontal="10dp"
+                                        android:paddingVertical="4dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="👨‍🚀 Active"
+                                        android:textColor="#BB86FC"
+                                        android:textSize="12sp"
+                                        android:background="@drawable/chip_bg_transparent"
+                                        android:paddingHorizontal="10dp"
+                                        android:paddingVertical="4dp" />
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:layout_weight="1" />
+
+                                    <FrameLayout
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:background="@drawable/circle_button_accent">
+
+                                        <ImageView
+                                            android:layout_width="18dp"
+                                            android:layout_height="18dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_arrow_forward"
+                                            app:tint="@android:color/white" />
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- NASA Card -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardNasa"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="6dp"
+                        app:cardBackgroundColor="#0B3D91">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!-- NASA Background -->
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/nasa" />
+
+                            <!-- Dark Gradient Overlay -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_gradient_overlay_dark" />
+
+                            <!-- Coming Soon Overlay -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#40000000" />
+
+                            <!-- Content -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="bottom"
+                                android:padding="16dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="NASA"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    android:fontFamily="sans-serif-medium" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mars Rovers, ISS &amp; Deep Space"
+                                    android:textColor="#B0FFFFFF"
+                                    android:textSize="13sp"
+                                    android:layout_marginTop="2dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="🛸 50+ Missions"
+                                        android:textColor="#BB86FC"
+                                        android:textSize="12sp"
+                                        android:background="@drawable/chip_bg_transparent"
+                                        android:paddingHorizontal="10dp"
+                                        android:paddingVertical="4dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="8dp"
+                                        android:text="🌍 Science"
+                                        android:textColor="#BB86FC"
+                                        android:textSize="12sp"
+                                        android:background="@drawable/chip_bg_transparent"
+                                        android:paddingHorizontal="10dp"
+                                        android:paddingVertical="4dp" />
+
+                                    <View
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        android:layout_weight="1" />
+
+                                    <FrameLayout
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:background="@drawable/circle_button_bg">
+
+                                        <ImageView
+                                            android:layout_width="18dp"
+                                            android:layout_height="18dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_arrow_forward"
+                                            app:tint="#80FFFFFF" />
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <!-- Coming Soon Badge -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top|end"
+                                android:layout_margin="12dp"
+                                android:text="COMING SOON"
+                                android:textColor="#FFB74D"
+                                android:textSize="10sp"
+                                android:textStyle="bold"
+                                android:background="@drawable/badge_coming_soon"
+                                android:paddingHorizontal="10dp"
+                                android:paddingVertical="5dp" />
+
+                        </FrameLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Bottom Info -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="Powered by SpaceX &amp; NASA public APIs"
+                        android:textColor="#60FFFFFF"
+                        android:textSize="12sp"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

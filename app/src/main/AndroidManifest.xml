@@ -92,6 +92,62 @@
                 android:value=".presentation.moons.MoonsActivity" />
         </activity>
         
+        <!-- Space Agency Selection Activity -->
+        <activity
+            android:name=".presentation.spacex.SpaceAgencySelectionActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.home.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.home.HomeActivity" />
+        </activity>
+        
+        <!-- SpaceX Activities -->
+        <activity
+            android:name=".presentation.spacex.SpaceMissionsActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.spacex.SpaceAgencySelectionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.spacex.SpaceAgencySelectionActivity" />
+        </activity>
+        
+        <activity
+            android:name=".presentation.spacex.LaunchListActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.spacex.SpaceMissionsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.spacex.SpaceMissionsActivity" />
+        </activity>
+        
+        <activity
+            android:name=".presentation.spacex.LaunchDetailActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.spacex.LaunchListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.spacex.LaunchListActivity" />
+        </activity>
+        
+        <activity
+            android:name=".presentation.spacex.CrewListActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.spacex.SpaceMissionsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.spacex.SpaceMissionsActivity" />
+        </activity>
+        
+        <activity
+            android:name=".presentation.spacex.RocketListActivity"
+            android:exported="false"
+            android:parentActivityName=".presentation.spacex.SpaceMissionsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".presentation.spacex.SpaceMissionsActivity" />
+        </activity>
+        
         <!-- Legacy Activities (can be removed later) -->
         <activity
             android:name=".PlanetDetails"

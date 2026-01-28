@@ -12,6 +12,7 @@ import com.example.planetapp.presentation.adapter.CategoryAdapter
 import com.example.planetapp.presentation.category.CategoryDetailActivity
 import com.example.planetapp.presentation.moons.MoonPlanetSelectionActivity
 import com.example.planetapp.presentation.planets.PlanetListActivity
+import com.example.planetapp.presentation.spacex.SpaceAgencySelectionActivity
 
 class HomeActivity : AppCompatActivity() {
     
@@ -49,6 +50,10 @@ class HomeActivity : AppCompatActivity() {
             2 -> {
                 // Moons - Navigate to Planet Selection first
                 startActivity(Intent(this, MoonPlanetSelectionActivity::class.java))
+            }
+            3 -> {
+                // Space Missions - Agency Selection (SpaceX / NASA)
+                startActivity(Intent(this, SpaceAgencySelectionActivity::class.java))
             }
             else -> {
                 val intent = Intent(this, CategoryDetailActivity::class.java).apply {

@@ -5,6 +5,9 @@ import android.view.View
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.OvershootInterpolator
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.example.planetapp.databinding.ActivityMoonDetailBinding
 import com.example.planetapp.databinding.ItemPropertyRowBinding
 import com.example.planetapp.domain.model.Moon
@@ -18,6 +21,11 @@ class MoonDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
+        // Make status bar transparent for immersive header
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = android.graphics.Color.TRANSPARENT
+        
         binding = ActivityMoonDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
@@ -42,14 +50,6 @@ class MoonDetailActivity : AppCompatActivity() {
             moonName.text = moon.englishName
             parentPlanet.text = "Orbits ${moon.getParentPlanetDisplayName()}"
             planetEmoji.text = moon.getPlanetEmoji()
-            
-            // Moon emoji based on size
-            moonEmoji.text = when {
-                moon.meanRadius > 1000 -> "🌕"
-                moon.meanRadius > 500 -> "🌖"
-                moon.meanRadius > 100 -> "🌘"
-                else -> "🌑"
-            }
             
             // Quick stats cards
             val formattedRadius = if (moon.meanRadius >= 100) {
@@ -190,55 +190,46 @@ class MoonDetailActivity : AppCompatActivity() {
     }
 
     private fun playEntryAnimations() {
-        // Animate moon icon
-        binding.moonEmoji.apply {
-            scaleX = 0f
-            scaleY = 0f
-            animate()
-                .scaleX(1f)
-                .scaleY(1f)
-                .setDuration(600)
-                .setStartDelay(200)
-                .setInterpolator(OvershootInterpolator(2f))
-                .start()
-        }
-        
-        // Animate glow
-        binding.moonGlowEffect.apply {
+        // Animate moon name with fade and slide up
+        binding.moonName.apply {
             alpha = 0f
-            scaleX = 0.5f
-            scaleY = 0.5f
+            translationY = 30f
             animate()
-                .alpha(0.6f)
-                .scaleX(1f)
-                .scaleY(1f)
-                .setDuration(800)
-                .setStartDelay(300)
+                .alpha(1f)
+                .translationY(0f)
+                .setDuration(500)
+                .setStartDelay(200)
+                .setInterpolator(DecelerateInterpolator())
                 .start()
         }
         
-        // Start continuous glow pulse
-        startGlowPulse()
-    }
-
-    private fun startGlowPulse() {
-        binding.moonGlowEffect.animate()
-            .alpha(0.3f)
-            .scaleX(1.2f)
-            .scaleY(1.2f)
-            .setDuration(1500)
-            .setInterpolator(DecelerateInterpolator())
-            .withEndAction {
-                binding.moonGlowEffect.animate()
-                    .alpha(0.6f)
-                    .scaleX(1f)
-                    .scaleY(1f)
-                    .setDuration(1500)
-                    .setInterpolator(DecelerateInterpolator())
-                    .withEndAction { startGlowPulse() }
-                    .start()
-            }
-            .start()
+        // Animate the badge
+        binding.parentPlanet.apply {
+            alpha = 0f
+            scaleX = 0.8f
+            scaleY = 0.8f
+            animate()
+                .alpha(1f)
+                .scaleX(1f)
+                .scaleY(1f)
+                .setDuration(400)
+                .setStartDelay(350)
+                .setInterpolator(OvershootInterpolator(1.5f))
+                .start()
+        }
+        
+        // Animate fun fact card
+        binding.funFactCard.apply {
+            alpha = 0f
+            translationY = 50f
+            animate()
+                .alpha(1f)
+                .translationY(0f)
+                .setDuration(500)
+                .setStartDelay(500)
+                .setInterpolator(DecelerateInterpolator())
+                .start()
+        }
     }
 
     override fun onBackPressed() {
